@@ -2,7 +2,7 @@
 
 require_relative('display')
 require_relative('dictionary')
-require_relative('game')
+require_relative('newgame')
 
 # plays game of hangman
 class Hangman
@@ -37,11 +37,7 @@ class Hangman
 
   def play_new_game
     @word_for_new_game = Dictionary.new(File.readlines('words.txt', chomp: true))
-    Game.new(0, @word_for_new_game.random_word_select, []).play_game
-  end
-
-  def game_stopped
-    # return true or false
+    NewGame.new(@word_for_new_game.random_word_select, @display).play_game
   end
 end
 
