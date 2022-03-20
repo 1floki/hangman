@@ -60,9 +60,10 @@ class NewGame
   end
 
   def save_file
+    Dir.mkdir('saved') unless Dir.exist?('saved')
     puts "Enter a name for save file:"
     @name = gets.chomp
-    File.write("#{@name}.yaml", to_yaml)  
+    File.write("saved/#{@name}.yaml", to_yaml)  
   end
 
   def to_yaml

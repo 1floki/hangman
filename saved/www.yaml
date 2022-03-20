@@ -1,21 +1,18 @@
 ---
 :word_to_guess:
-- a
-- r
-- n
-- o
-- l
-- d
-:correctly_guessed:
-- a
-- l
-- o
-:attempts: 4
-:guessed_attempts_letter:
-- a
-- s
-- g
-- l
+- p
+- i
+- c
 - k
-- e
+- u
+- p
+:correctly_guessed:
+- i
+:attempts: 5
+:guessed_attempts_letter:
+- s
+- n
+- w
 - o
+- a
+- i
