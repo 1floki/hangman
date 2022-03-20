@@ -15,4 +15,3 @@ class Dictionary
     load_words_between_five_twelve.sample.gsub(' ', '')
   end
 end
-

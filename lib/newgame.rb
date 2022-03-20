@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require_relative('display')
 require('yaml')
 # frozen_string_literal: true
@@ -49,7 +50,7 @@ class NewGame
     if @word_to_guess.include?(@input)
       display_current_state
       puts 'Hurray! That was a correct guess!'
-      @correctly_guessed.push(@input)
+      @word_to_guess.count(@input).times { @correctly_guessed.push(@input) }
     elsif @input == 'save'
       save_file
     else
@@ -61,22 +62,22 @@ class NewGame
 
   def save_file
     Dir.mkdir('saved') unless Dir.exist?('saved')
-    puts "Enter a name for save file:"
+    puts 'Enter a name for save file:'
     @name = gets.chomp
-    File.write("saved/#{@name}.yaml", to_yaml)  
+    File.write("saved/#{@name}.yaml", to_yaml)
   end
 
   def to_yaml
     YAML.dump({
-      :word_to_guess => @word_to_guess,
-      :correctly_guessed => @correctly_guessed,
-      :attempts => @attempts,
-      :guessed_attempts_letter => @guessed_attempts_letter
-    })
+                word_to_guess: @word_to_guess,
+                correctly_guessed: @correctly_guessed,
+                attempts: @attempts,
+                guessed_attempts_letter: @guessed_attempts_letter
+              })
   end
 
   def check_if_game_ends
-    if @word_to_guess.sort == @correctly_guessed.sort
+    if @word_to_guess.sort.join('') == @correctly_guessed.sort.join('')
       @winner_declared = true
       display_current_state
       puts "Congrats, you have succefully guessed the word: #{@word_to_guess.join('')}"

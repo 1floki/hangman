@@ -33,8 +33,9 @@ class Hangman
 
   def load_saved_game
     @file_name = select_file_name_to_load
-    @data = YAML.load_file(@file_name) 
-    NewGame.new(@data[:word_to_guess], @data[:correctly_guessed], @data[:attempts], @data[:guessed_attempts_letter]).play_game
+    @data = YAML.load_file(@file_name)
+    NewGame.new(@data[:word_to_guess], @data[:correctly_guessed], @data[:attempts],
+                @data[:guessed_attempts_letter]).play_game
   end
 
   def play_new_game
@@ -45,7 +46,7 @@ class Hangman
   end
 
   def select_file_name_to_load
-    system("clear")
+    system('clear')
     puts 'Enter the name of the save file from the following: '
     @show_file_name = Dir['saved/*.yaml']
     @show_file_name.each { |file| puts file.gsub('saved/', '').gsub('.yaml', '') }
@@ -54,5 +55,4 @@ class Hangman
   end
 end
 
-game = Hangman.new
-game.play_game
+
