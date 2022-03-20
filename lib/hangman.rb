@@ -54,5 +54,3 @@ class Hangman
     "saved/#{@get_file_name}.yaml"
   end
 end
-
-
