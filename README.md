@@ -5,7 +5,7 @@
   
  <h2>Demo</h2>
  <p>The new game can be loaded by going in the home directory and running the following command: main.rb.</p>
- </p>Note: Ruby must be installed on your local machine. However, this can be played by using the online repl.</p>
+ </p>Note: Ruby must be installed on your local machine. However, this can be played by using the <a href="https://replit.com/@FlokiProgrammer/hangman">online repl</a>.</p>
   <h3>Loading New Game</h3>
  <img src="https://user-images.githubusercontent.com/90931204/159165346-e1f39489-ae79-4f73-a6dc-8639a53f09b4.gif">
  <h3>Save/Load Game</h3> 
