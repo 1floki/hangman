@@ -1,0 +1,21 @@
+---
+:word_to_guess:
+- a
+- r
+- n
+- o
+- l
+- d
+:correctly_guessed:
+- a
+- l
+- o
+:attempts: 4
+:guessed_attempts_letter:
+- a
+- s
+- g
+- l
+- k
+- e
+- o

@@ -37,7 +37,9 @@ class Hangman
 
   def play_new_game
     @word_for_new_game = Dictionary.new(File.readlines('words.txt', chomp: true))
-    NewGame.new(@word_for_new_game.random_word_select, @display).play_game
+    @word_for_new_game = @word_for_new_game.random_word_select
+    @word_for_new_game = @word_for_new_game.split('')
+    NewGame.new(@word_for_new_game).play_game
   end
 end
 

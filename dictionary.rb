@@ -12,8 +12,7 @@ class Dictionary
   end
 
   def random_word_select
-    load_words_between_five_twelve.sample
+    load_words_between_five_twelve.sample.gsub(' ', '')
   end
 end
 
-# letter = Dictionary.new(File.readlines('words.txt', chomp: true))
