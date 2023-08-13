@@ -13,3 +13,4 @@
 
 <h2>Credits</h2>
 <p>This project is part of TheOdinProject curriculum. I want to thank all the maintainers and contributors for such an amazing platform. The purpose of this project is to have better understanding of serialization.</p>
+<span>Pull request are welcomed!</span>
